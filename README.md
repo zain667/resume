@@ -5,10 +5,9 @@ This repository is a private space to manage and organize different versions of 
 
 ## Contents
 
-- [General Resume](./general_resume.pdf)
-- [Tech Resume](./tech_resume.pdf)
-- [Management Resume](./management_resume.pdf)
-- [Creative Resume](./creative_resume.pdf)
+- [Operation Readiness Engineer](./Operation_Readiness_Engineer/zain_hassan_resume_2024-06.docx)
+- [Deputy Operation Manager](./Deputy_Operation_Manager/zain_hassan_resume_2024-06.docx)
+- [Start-Up Process Engineer](./Start-Up_Process_Engineer/zain_hassan_resume_2024-06.docx)
 
 ## Purpose
 
@@ -22,8 +21,8 @@ This repository serves several key purposes:
 ## Guidelines
 
 1. **Naming Conventions:**
-   - Use clear and descriptive names for each resume version (e.g., `general_resume.pdf`, `tech_resume.pdf`).
-   - Include dates in the file name for version tracking (e.g., `general_resume_2024-06.pdf`).
+   - Use clear and descriptive names for each resume version (e.g., `zain_hassan_resume_2024-06.docx`).
+   - Include dates in the file name for version tracking (e.g., `zain_hassan_resume_2024-06.docx`).
 
 2. **Update Frequency:**
    - Review and update resumes regularly, especially before applying for new jobs.
@@ -40,20 +39,21 @@ This repository serves several key purposes:
    - Download files as needed for job applications or offline review.
 
 2. **Adding a New Version:**
-   - Create a new folder with the job title as the folder name (e.g., `Software_Engineer`).
+   - Create a new folder with the job title as the folder name (e.g., `New_Job_Title`).
    - Inside the new folder, create a `.gitkeep` file to ensure the folder is tracked by Git.
-   - Upload the updated resume tailored for the specific role into this folder.
+   - Upload the updated resume tailored for the specific role into this folder, naming it as `zain_hassan_resume_<date>.docx`.
    - Update this README file if necessary to reflect the new addition.
 
    Example:
-/Software_Engineer/
-- .gitkeep
-- software_engineer_resume_2024-06.pdf
+   ```markdown
+   /New_Job_Title/
+   ├── .gitkeep
+   └── zain_hassan_resume_2024-06.docx
 
   
 ## Contact
 
-For any questions or suggestions, please feel free to contact me at [your-email@example.com].
+For any questions or suggestions, please feel free to contact me at zainhassan667@gmail.com.
 
 ---
 
