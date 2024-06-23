@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Update Log</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .navigation {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .navigation a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+        }
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .submit-button {
+            width: 150px;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            align-self: center;
+        }
+        .log-entry {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Update Log</h1>
+        <div class="navigation">
+            <a href="index.html">Home</a>
+            <a href="update-log.html">Resume Update Log</a>
+        </div>
+        <form id="log-form">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="resume">Resume:</label>
+            <select id="resume" name="resume" required>
+                <option value="Operation Readiness Engineer">Operation Readiness Engineer</option>
+                <option value="Deputy Operation Manager">Deputy Operation Manager</option>
+                <option value="Start-Up Process Engineer">Start-Up Process Engineer</option>
+            </select>
+
+            <label for="description">Update Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <button type="submit" class="submit-button">Add Log Entry</button>
+        </form>
+
+        <h2>Log Entries</h2>
+        <div id="log-entries"></div>
+    </div>
+
+    <script>
+        document.getElementById('log-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const date = document.getElementById('date').value;
+            const resume = document.getElementById('resume').value;
+            const description = document.getElementById('description').value;
+
+            const logEntry = document.createElement('div');
+            logEntry.className = 'log-entry';
+            logEntry.innerHTML = `<strong>Date:</strong> ${date}<br>
+                                  <strong>Resume:</strong> ${resume}<br>
+                                  <strong>Description:</strong> ${description}`;
+
+            document.getElementById('log-entries').appendChild(logEntry);
+
+            document.getElementById('log-form').reset();
+        });
+    </script>
+</body>
+</html>
