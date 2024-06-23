@@ -18,7 +18,7 @@
             padding: 20px;
             border-radius: 5px;
         }
-        h1 {
+        h1, h2 {
             text-align: center;
         }
         .navigation {
@@ -30,21 +30,11 @@
             text-decoration: none;
             color: #007bff;
         }
-        .action-button {
-            display: block;
-            width: 200px;
-            margin: 20px auto;
-            padding: 10px;
-            background: #007bff;
-            color: white;
-            text-align: center;
-            border-radius: 5px;
-            text-decoration: none;
+        .resume-list {
+            margin: 20px 0;
         }
-        .markdown-body {
-            padding: 20px;
-            border-radius: 5px;
-            background: white;
+        .resume-item {
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -53,24 +43,23 @@
         <h1>Resume Repository</h1>
         <div class="navigation">
             <a href="index.html">Home</a>
-            <a href="create.html">Create New Directory</a>
+            <a href="feedback.html">Provide Feedback</a>
         </div>
-        <div id="readme-content" class="markdown-body"></div>
+        <h2>Available Resumes</h2>
+        <div class="resume-list">
+            <div class="resume-item">
+                <a href="operation_readiness_engineer/zain_hassan_resume.docx">Operation Readiness Engineer (DOCX)</a>
+                | <a href="operation_readiness_engineer/zain_hassan_resume.pdf">PDF</a>
+            </div>
+            <div class="resume-item">
+                <a href="deputy_operation_manager/zain_hassan_resume.docx">Deputy Operation Manager (DOCX)</a>
+                | <a href="deputy_operation_manager/zain_hassan_resume.pdf">PDF</a>
+            </div>
+            <div class="resume-item">
+                <a href="start_up_process_engineer/zain_hassan_resume.docx">Start-Up Process Engineer (DOCX)</a>
+                | <a href="start_up_process_engineer/zain_hassan_resume.pdf">PDF</a>
+            </div>
+        </div>
     </div>
-
-    <script>
-        async function loadReadme() {
-            try {
-                const response = await fetch('../README.md');
-                const text = await response.text();
-                document.getElementById('readme-content').innerHTML = marked(text);
-            } catch (error) {
-                console.error('Error loading README.md:', error);
-            }
-        }
-
-        loadReadme();
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </body>
 </html>
